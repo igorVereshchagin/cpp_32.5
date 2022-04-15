@@ -16,7 +16,7 @@ set(JSON_BuildTests OFF CACHE INTERNAL "")
 # discouraged (although not necessarily well documented as such) to use
 # include(...) for pulling in other CMake projects anyways.
 
-add_subdirectory(nlohmann_json)
+add_subdirectory(../externals/nlohmann_json build_json)
 
 add_executable(1 main.cpp)
 target_link_libraries(1 PRIVATE nlohmann_json::nlohmann_json)
