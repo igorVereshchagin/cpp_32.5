@@ -15,6 +15,11 @@ int main()
   film["Main roles"]["Ellis \"Red\" Redding"] = "Morgan Freeman";
   film["Main roles"]["Samuel Norton"] = "Bob Gunton";
   std::ofstream filmFile("..\\film.json");
+  if (!filmFile.is_open())
+  {
+    std::cout << "Can't open file ..\\film.json" << std::endl;
+    return -1;
+  }
   filmFile << film << std::endl;
   filmFile.close();
   return 0;
